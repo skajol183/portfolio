@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  overflow: scroll;
+
+  & .parent {
+    height: 400px;
+    padding: 10px;
+    & .list {
+      display: flex;
+      & .heading {
+        & h3 {
+          font-size: large;
+          font-family: "Poppins bold";
+          color: #1f2235;
+        }
+        & h4 {
+          font-size: smaller;
+          font-family: "Poppins bold";
+          color: #1f2235;
+        }
+        & p {
+          font-size: medium;
+          font-family: "Poppins SemiBold";
+          color: #007bff;
+        }
+      }
+    }
+  }
+}
+
+// ----------------progress tag css-------------
+progress[value] {
+  --color: var(--dark-orange); /* the progress color */
+  --background: #1f2235; /* the background color */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 350px;
+  height: 35px;
+  margin: 0 10px;
+  border-radius: 5px;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-bar {
+  border-radius: 5px;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  border-radius: 5px;
+  background: var(--color);
+}
+progress[value]::-moz-progress-bar {
+  border-radius: 5px;
+  background: var(--color);
+}
+
+/* -----------for i-pad pro---------- */
+@media screen and (max-width: 1110px) {
+  .container {
+    & .parent {
+      & .list {
+        display: revert;
+        & .content {
+          & .resumeBtn {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    justify-content: flex-start;
+    & .parent {
+      padding: 0;
+
+      & .list {
+        & .heading {
+          & h3 {
+            font-size: smaller;
+          }
+          & h4 {
+            font-size: small;
+          }
+          & p {
+            font-size: small;
+          }
+        }
+        & .content {
+          & .resumeBtn {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  progress[value] {
+    width: 230px;
+    height: 25px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,30 @@
+.BottomCurve-container {
+  height: 17.8%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.BottomCurve-parent {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+}
+
+.BottomCurve-parent img {
+  max-width: 100%;
+  height: 130px;
+}
+
+@media screen and (max-width: 1110px) {
+  .BottomCurve-parent {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .BottomCurve-parent img {
+    height: 50px;
+  }
+}

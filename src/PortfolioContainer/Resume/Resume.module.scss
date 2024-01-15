@@ -1,0 +1,99 @@
+.resume_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 80px 0;
+  gap: 40px;
+  height: 500px;
+  & .resume_parent {
+    width: 70%;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+
+    & .row {
+      & .navLinkHead {
+        display: flex;
+        gap: 20px;
+        & .navLink {
+          // color: #1f2235;
+          padding: 10px;
+          font-size: larger;
+          border-radius: 5px;
+          font-family: "poppins bold";
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          border: 1px solid skyblue;
+        }
+
+        & .nav-link.active,
+        .show > .nav-link {
+          // background-color: var(--dark-orange);
+          color: white;
+          font-family: "poppins bold";
+        }
+      }
+    }
+  }
+
+  & .resume_heading {
+    text-align: center;
+    & h2 {
+      font-size: 2rem;
+      font-family: "Poppins ExtraBold";
+      color: #1f2235;
+    }
+    & span {
+      font-size: 1rem;
+      font-family: "Poppins SemiBold";
+      color: #ff5823;
+    }
+  }
+}
+
+/* -----------for i-pad pro---------- */
+@media screen and (max-width: 1110px) {
+  .resume_container {
+    height: auto;
+    & .resume_parent {
+      width: 90%;
+      & .row {
+        & .navLinkHead {
+          & .navLink {
+            font-size: smaller;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resume_container {
+    margin: 40px 0;
+    gap: 20px;
+    & .resume_parent {
+      padding: 20px;
+      & .row {
+        gap: 40px;
+        flex-direction: column;
+        & .navLinkHead {
+          & .navLink {
+            // font-size: smaller;
+          }
+        }
+      }
+    }
+    & .resume_heading {
+      & h2 {
+        font-size: x-large;
+      }
+    }
+  }
+}

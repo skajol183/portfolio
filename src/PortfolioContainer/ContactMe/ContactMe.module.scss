@@ -1,0 +1,94 @@
+.contact_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  height: auto;
+  margin: 80px 0;
+
+  & .contact_parent {
+    width: 70%;
+    height: 500px;
+    background-image: url("../../assests/Home/mailz.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    & .contact_form {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      & h2 {
+        font-size: 2rem;
+        font-family: "Poppins ExtraBold";
+        color: white;
+      }
+      & span {
+        font-size: 1rem;
+        font-family: "Poppins SemiBold";
+        color: #ff5823;
+      }
+
+      & form {
+        border-radius: 20px;
+        padding: 30px;
+        background-color: white;
+
+        & label {
+          color: "#1f223";
+          font-size: large;
+          font-weight: 600;
+        }
+        & input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: transparent;
+          border-radius: 5px;
+          background-color: #dbeaf0;
+        }
+      }
+    }
+  }
+}
+
+/* -----------for i-pad pro---------- */
+@media screen and (max-width: 1110px) {
+  .contact_container {
+    & .contact_parent {
+      width: 90%;
+      height: auto;
+      & .contact_form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact_container {
+    margin: 40px 0;
+    & .contact_parent {
+      & .contact_form {
+        & h2 {
+          font-size: x-large;
+        }
+        & form {
+          padding: 15px;
+          & label {
+            font-size: medium;
+          }
+          & input,
+          textarea {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
