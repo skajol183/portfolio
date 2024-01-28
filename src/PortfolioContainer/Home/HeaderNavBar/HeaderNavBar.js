@@ -33,6 +33,13 @@ function HeaderNavBar() {
                 </Nav.Link>
               );
             })}
+            <a
+              className="list-item anchor"
+              href="https://career.io/r/P2XEbBlk2"
+              target="blank"
+            >
+              Resume Link
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>
