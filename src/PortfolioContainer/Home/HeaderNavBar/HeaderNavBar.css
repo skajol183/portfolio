@@ -16,12 +16,15 @@
   font-family: "Poppins SemiBold";
 }
 
+.anchor {
+  padding: 8px;
+}
+
 .brand:hover {
   color: #ff582e !important;
   transform: scale(1.07);
   transition: 1s ease-out;
 }
-
 .list-item:hover {
   color: #ff582e !important;
   transform: scale(1.07);
@@ -44,6 +47,9 @@
     font-size: 1rem;
     font-family: "Poppins Bold";
   }
+  .anchor {
+    padding: 8px 0;
+  }
 }
 
 /* @media screen and (max-width: 910px) {
@@ -54,4 +60,4 @@
     font-size: 1.5rem;
     font-family: "Poppins SemiBold";
   }
-} 
+}
